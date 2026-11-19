@@ -48,7 +48,7 @@ def get_script():
     )
     client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
     last_err = None
-    for model in ["gemini-2.5-flash", "gemini-flash-latest"]:
+    for model in ["gemini-1.5-flash", "gemini-1.5-flash"]:
         try:
             r = client.models.generate_content(
                 model=model,
